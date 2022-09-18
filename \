@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include"rand.h"
+#include"fact.h"
+#include"fib.h"
+
+int main()
+{
+    char s[30];
+    char chk;/*to check if string value equal exit */
+    int num=1;
+    
+    do {
+
+        printf("Enter what U want >");
+        gets(s);
+        chk=(strcmp(s,"exit"));
+        
+	if (!strcmp(s,"rand")){
+	randFn();
+	}
+	else if (!strcmp(s,"fact")){
+	printf("Enter a number: ");
+	scanf("%d",&num);
+	printf("Result is: %ld \n",fact(num));
+	break;
+	}
+	else if (!strcmp(s,"fib")){
+	printf("Enter a number: ");
+        scanf("%d",&num);
+        printf("The sequence is: ");
+	for (int i=0;i<num;i++){
+	printf("%ld, ",fib(i));
+	}
+	printf("%ld",fib(num));
+	printf("\n");
+
+	}
+	else if (chk!=0) {
+            printf("You said: %s \n", s);
+        }
+
+    } while (chk!=0);
+    printf("Good Bye :)\n");
+
+    return 0;
+}
+
