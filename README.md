@@ -38,7 +38,7 @@ main.c contains main function at this stages
 ###Dynamic Library Creation
 
     ```` bash
-    $ gcc -shared -fpic -o libvector.so addvec.c multvec.c
+    $ gcc -shared -fpic -o libFemtoShell.so rand.c fact.c fib.c
     $ gcc -o myDyFemtoShell dyProg.c ./libFemtoShell.so
     ````
  ###Testig Dynamic Lib
