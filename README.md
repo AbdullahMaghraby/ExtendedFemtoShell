@@ -14,6 +14,7 @@ Shell that echo entered strings and have multiple internal commands
 ###Developing ordinary modules in separate files
 main.c contains main function at this stages
 ###compiling files
+
     ```` bash
     $ gcc -c *.c
     $ gcc *.o -o myExtFemtoShell
@@ -23,6 +24,7 @@ main.c contains main function at this stages
 ![](/1.png "1st stage test")
 
 ###Static Library Creation
+
     ```` bash
     $ gcc -c rand.c fact.c fib.c
     $ ar -rs libFemtoShell.a rand.o fact.o fib.o
@@ -34,6 +36,7 @@ main.c contains main function at this stages
 ![](/2.png "2nd stage test")
 
 ###Dynamic Library Creation
+
     ```` bash
     $ gcc -shared -fpic -o libvector.so addvec.c multvec.c
     $ gcc -o myDyFemtoShell dyProg.c ./libFemtoShell.so
